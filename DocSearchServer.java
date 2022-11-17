@@ -12,6 +12,7 @@ import java.util.Collections;
 class FileHelpers {
     static List<File> getFiles(Path start) throws IOException {
         File f = start.toFile();
+	System.out.println("This is a directory: " + f.toString());
         List<File> result = new ArrayList<>();
         if(f.isDirectory()) {
             File[] paths = f.listFiles();
